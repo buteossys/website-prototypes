@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --white: #f9f8f7;
+  --brown: #7a5137;
+  --light-brown: #c99157;
+  --black: #2e2122;
+  --red: #bc2122;
+  --background: var(--white);
+  --foreground: var(--black);
+}
+
+@layer base {
+  body {
+    @apply bg-[#f9f8f7] text-[#2e2122];
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block px-4 py-2 bg-[#bc2122] text-[#f9f8f7] rounded-md font-bold transition-colors duration-300;
+  }
+  
+  .btn:hover {
+    @apply bg-[#7a5137];
+  }
+  
+  .menu-section {
+    @apply mb-8;
+  }
+  
+  .menu-item {
+    @apply flex justify-between mb-4 pb-4 border-b border-[#c99157];
+  }
+  
+  .menu-item:last-child {
+    @apply border-b-0;
+  }
+  
+  .menu-item__name {
+    @apply font-bold text-[#2e2122];
+  }
+  
+  .menu-item__description {
+    @apply text-gray-600 text-sm mt-1;
+  }
+  
+  .menu-item__price {
+    @apply font-bold text-[#bc2122];
+  }
+}
